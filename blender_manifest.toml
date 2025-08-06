@@ -1,0 +1,47 @@
+# Blender Add-on Manifest
+# This file defines the metadata and configuration for the Material Diffusion add-on
+# Compliant with Blender Extension Platform specification
+
+schema_version = "1.0.0"
+
+# Add-on Identification
+id = "blender_material_diffusion"
+version = "1.0.0"
+name = "Material Diffusion"
+tagline = "AI-powered material generation for Blender using ComfyUI backend"
+maintainer = "Eugenio Buffo <buffo.eugenio@gmail.com>"
+type = "add-on"
+
+# Project Information
+website = "https://github.com/EugenioBuffo/blender-material-diffusion"
+tags = [
+    "3D-View",
+    "Render", 
+    "Scene", 
+    "Texture", 
+    "Material",
+    "Diffusion", 
+    "ComfyUI", 
+    "AI", 
+    "Generative",
+    "Workflow"
+]
+
+# Compatibility
+blender_version_min = "4.2.0"
+
+# Legal Information
+license = ["SPDX:AGPL-3.0-or-later"]
+copyright = [
+    "2024-2025 Eugenio Buffo",
+]
+
+# Dependencies - Bundle Pillow for Windows compatibility
+wheels = [
+    "./wheels/pillow-11.0.0-cp311-cp311-win_amd64.whl",
+]
+
+# Permission Requirements
+[permissions]
+files = "Read and write material images and textures to disk for generation workflow"
+network = "Communicate with ComfyUI backend server for AI material generation requests"
